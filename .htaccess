@@ -1,0 +1,7 @@
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Request-Method "POST"
+Header set Access-Control-Allow-Headers "Authorization, Content-Type"
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.html [QSA,L]
